@@ -1,0 +1,276 @@
+@import 'lib';
+
+body {
+    background-color: #000;
+}
+#reveal-wrap {
+    width: 1282px;
+    height: 481px;
+    #reveal {
+        width: 1282px;
+        height: 481px;
+        background-color: #5b9ec0;
+        background-image: url(../img/reveal/reveal-bg.png);
+        overflow: hidden;
+    }
+}
+.reveal-man {
+    width: 1016px;
+    margin: auto;
+    left: -340px;
+    cursor: pointer;
+
+    &.animate > div {
+        .transition(all 1s ease-out);
+    }
+    position: relative;
+    .reveal-chest {
+        background-image: url(../img/reveal/chest.png);
+        width: 383px;
+        height: 383px;
+        top: 84px;
+        left: 324px;
+        position: absolute;
+        z-index: 4;
+        .transform(translate(0, 10px));
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(translate(0, 20px));
+        }
+    }
+    .reveal-filler {
+        background-image: url(../img/reveal/filler.png);
+        width: 157px;
+        height: 154px;
+        top: 83px;
+        left: 337px;
+        position: absolute;
+        z-index: 5;
+        .transform(rotate(15deg));
+        .transform-origin(139px 15px);
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(rotate(-2deg));
+        }
+    }
+    .reveal-filler-r {
+        background-image: url(../img/reveal/filler-r.png);
+        width: 167px;
+        height: 182px;
+        top: 83px;
+        left: 536px;
+        position: absolute;
+        z-index: 5;
+        .transform-origin(0px 0px);
+        .transform(translate(10px, 10px));
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(rotate(15deg));
+        }
+    }
+    .reveal-filler-r2 {
+        background-image: url(../img/reveal/filler-r2.png);
+        width: 167px;
+        height: 182px;
+        top: 253px;
+        left: 546px;
+        position: absolute;
+        z-index: 5;
+        .transform-origin(50% 50%);
+        .transform(rotate(94deg));
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(rotate(72deg) translate(-20px, 52px));
+        }
+    }
+    .reveal-neck {
+        background-image: url(../img/reveal/neck.png);
+        width: 649px;
+        height: 178px;
+        position: absolute;
+        top: 0;
+        left: 188px;
+        z-index: 10;
+    }
+    .reveal-shoulder {
+        background-image: url(../img/reveal/shoulder.png);
+        width: 186px;
+        height: 107px;
+        top: 78px;
+        left: 256px;
+        position: absolute;
+        z-index: 8;
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(rotate(-9deg) translate(14px, 7px));
+        }
+    }
+    .reveal-shoulder-r {
+        background-image: url(../img/reveal/shoulder-r.png);
+        width: 186px;
+        height: 107px;
+        top: 73px;
+        left: 572px;
+        position: absolute;
+        z-index: 8;
+        .transform-origin(42px 4px);
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(rotate(9deg) translate(-14px, -7px));
+        }
+    }
+    .reveal-arm {
+        background-image: url(../img/reveal/arm.png);
+        width: 270px;
+        height: 168px;
+        top: 142px;
+        left: 32px;
+        position: absolute;
+        z-index: 7;
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(rotate(-27deg) translate(90px, 36px));
+            .transform-origin(224px 155px);
+        }
+    }
+    .reveal-arm-r {
+        background-image: url(../img/reveal/arm-r.png);
+        width: 270px;
+        height: 168px;
+        top: 137px;
+        left: 710px;
+        position: absolute;
+        z-index: 7;
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(rotate(27deg) translate(-90px, 36px));
+            .transform-origin(46px 155px);
+        }
+    }
+    .reveal-hand {
+        background-image: url(../img/reveal/hand.png);
+        width: 318px;
+        height: 220px;
+        top: 184px;
+        left: 34px;
+        position: absolute;
+        z-index: 10;
+        .on &, 
+        .show-panel5-reveal & {
+            .transform-origin(227px 187px);
+            .transform(rotate(-12deg) translate(124px, 64px));
+        }
+    }
+    .reveal-hand-r {
+        background-image: url(../img/reveal/hand-r.png);
+        width: 318px;
+        height: 220px;
+        top: 179px;
+        left: 662px;
+        position: absolute;
+        z-index: 10;
+        .on &, 
+        .show-panel5-reveal & {
+            .transform-origin(92px 187px);
+            .transform(rotate(12deg) translate(-124px, 64px));
+        }
+    }
+    .reveal-button {
+        background-image: url(../img/reveal/button.png);
+        width: 193px;
+        height: 158px;
+        top: 407px;
+        left: 452px;
+        position: absolute;
+        z-index: 9;
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(translate(0, 44px));
+        }
+    }
+    .reveal-side {
+        background-image: url(../img/reveal/side.png);
+        width: 190px;
+        height: 235px;
+        top: 333px;
+        left: 295px;
+        position: absolute;
+        z-index: 9;
+        .transform-origin(5px 5px);
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(rotate(23deg) translate(80px, 6px));
+        }
+    }
+    .reveal-side-r {
+        background-image: url(../img/reveal/side-r.png);
+        width: 190px;
+        height: 235px;
+        top: 333px;
+        left: 538px;
+        position: absolute;
+        z-index: 6;
+        .transform-origin(185px 5px);
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(rotate(-23deg) translate(-80px, 6px));
+        }
+    }
+    .reveal-shirt-top {
+        background-image: url(../img/reveal/shirt-top.png);
+        width: 211px;
+        height: 168px;
+        top: 78px;
+        left: 299px;
+        position: absolute;
+        .transform-origin(195px 21px);
+        z-index: 9;
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(rotate(-37deg) translate(2px, 0));
+        }
+    }
+    .reveal-shirt-top-r {
+        background-image: url(../img/reveal/shirt-top-r.png);
+        width: 195px;
+        height: 148px;
+        top: 88px;
+        left: 510px;
+        position: absolute;
+        .transform-origin(0px 21px);
+        z-index: 9;
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(rotate(37deg) translate(-2px, 0));
+        }
+    }
+    .reveal-shirt-bottom {
+        background-image: url(../img/reveal/shirt-bottom.png);
+        width: 198px;
+        height: 156px;
+        top: 324px;
+        left: 318px;
+        position: absolute;
+        z-index: 8;
+        .transform-origin(198px 121px);
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(rotate(28deg) translate(26px, 45px));
+        }
+    }
+    .reveal-shirt-bottom-r {
+        background-image: url(../img/reveal/shirt-bottom-r.png);
+        width: 198px;
+        height: 156px;
+        top: 325px;
+        left: 516px;
+        position: absolute;
+        z-index: 7;
+        .transform-origin(0 121px);
+        .transform(rotate(-3deg) translate(0, 0));
+        .on &, 
+        .show-panel5-reveal & {
+            .transform(rotate(-33deg) translate(-26px, 45px));
+        }
+    }
+}

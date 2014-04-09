@@ -1,0 +1,205 @@
+---
+page: admin
+
+layout: admin
+---
+
+<div id="container">
+  <div id="login">
+    <form id="login-form">
+      <h2>Login</h2>
+      <input placeholder="username" name="username">
+      <input type="password" name="password" placeholder="password">
+      <button type="submit">Login</button>
+      or <a href="#register" class="go">register</a>
+    </form>
+  </div>
+
+  <div id="register">
+    <form id="register-form">
+      <h2>Register</h2>
+      <input placeholder="username" name="username">
+      <input type="password" name="password" placeholder="password">
+      <button type="submit">Register</button>
+      or <a href="#login" class="go">login</a>
+    </form>
+  </div>
+
+  <div id="hackfest" class="div">
+    <h3>HACKFEST</h3>
+    <nav>
+      <div class="filter">
+        <strong>Category</strong>
+        <a href="#hackfest" class="go active">Hackfest Apps</a>
+        <a href="#greylock" class="go">Greylock Apps</a>
+        <a href="#tf_students" class="go">TechFair Students</a>
+        <a href="#tf_companies" class="go">TechFair Companies</a>
+      </div>
+      <div class="filter-status">
+        <strong>Status</strong>
+        <a href="#" data-option="all" class="active">All</a>
+        <a href="#" data-option="0">New</a>
+        <a href="#" data-option="1">Yes</a>
+        <a href="#" data-option="2">Maybe</a>
+        <a href="#" data-option="3">No</a>
+        <a href="#" data-option="4">Emailed</a>
+        <a href="#" data-option="7">[Deleted]</a>
+      </div>
+      <div class="filter-type">
+        <strong>Type</strong>
+        <a href="#" data-option="all" class="active">All</a>
+        <a href="#" data-option="indv">Individuals</a>
+        <a href="#" data-option="team">Teams</a>
+      </div>
+      <div class="filter">
+        <strong>User</strong>
+        <a href="#" class="logout">logout</a>
+      </div>
+    </nav>
+
+    <table id="table_apps">
+      <tr>
+        <th>Name</th>
+        <th>College</th>
+        <th>Email</th>
+        <th>&nbsp;</th>
+        <th>Dazzle...</th>
+        <th>&nbsp;</th>
+        <th>Status</th>
+        <th>&nbsp;</th>
+      </tr>
+    </table>
+  </div>
+
+  <div id="greylock" class="div">
+    <h3>Greylock Portfolio Applications</h3>
+    <nav>
+      <div class="filter">
+        <strong>Category</strong>
+        <a href="#hackfest" class="go">Hackfest Apps</a>
+        <a href="#greylock" class="go active">Greylock Apps</a>
+        <a href="#tf_students" class="go">TechFair Students</a>
+        <a href="#tf_companies" class="go">TechFair Companies</a>
+      </div>
+      <div class="filter-status">
+        <strong>Status</strong>
+        <a href="#" data-option="all" class="active">All</a>
+        <a href="#" data-option="0">New</a>
+        <a href="#" data-option="1">Yes</a>
+        <a href="#" data-option="2">Maybe</a>
+        <a href="#" data-option="3">No</a>
+        <a href="#" data-option="4">Emailed</a>
+        <a href="#" data-option="7">[Deleted]</a>
+      </div>
+      <div class="filter-type">
+        <strong>Type</strong>
+        <a href="#" data-option="all" class="active">All</a>
+        <a href="#" data-option="i">Internship</a>
+        <a href="#" data-option="ft">Full Time</a>
+      </div>
+      <div class="filter">
+        <strong>User</strong>
+        <a href="#" class="logout">logout</a>
+      </div>
+    </nav>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>College</th>
+        <th>Email</th>
+        <th>&nbsp;</th>
+        <th>Dazzle...</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th>Status</th>
+        <th>&nbsp;</th>
+      </tr>
+    </table>
+  </div>
+
+  <div id="tf_students" class="div">
+    <h3>TechFair Students</h3>
+    <nav>
+      <div class="filter">
+        <strong>Category</strong>
+        <a href="#hackfest" class="go">Hackfest Apps</a>
+        <a href="#greylock" class="go">Greylock Apps</a>
+        <a href="#tf_students" class="go active">TechFair Students</a>
+        <a href="#tf_companies" class="go">TechFair Companies</a>
+      </div>
+      <div class="filter-status">
+        <strong>Status</strong>
+        <a href="#" data-option="all" class="active">All</a>
+        <a href="#" data-option="0">New</a>
+        <a href="#" data-option="1">Yes</a>
+        <a href="#" data-option="2">Maybe</a>
+        <a href="#" data-option="3">No</a>
+        <a href="#" data-option="4">Emailed</a>
+        <a href="#" data-option="7">[Deleted]</a>
+      </div>
+      <div class="filter">
+        <strong>User</strong>
+        <a href="#" class="logout">logout</a>
+      </div>
+    </nav>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>College</th>
+        <th>Email</th>
+        <th>&nbsp;</th>
+        <th>Status</th>
+        <th>&nbsp;</th>
+      </tr>
+    </table>
+  </div>
+
+  <div id="tf_companies" class="div">
+    <h3>TechFair Companies</h3>
+    <nav>
+      <div class="filter">
+        <strong>Category</strong>
+        <a href="#hackfest" class="go">Hackfest Apps</a>
+        <a href="#greylock" class="go">Greylock Apps</a>
+        <a href="#tf_students" class="go">TechFair Students</a>
+        <a href="#tf_companies" class="go active">TechFair Companies</a>
+      </div>
+      <div class="filter-status">
+        <strong>Status</strong>
+        <a href="#" data-option="all" class="active">All</a>
+        <a href="#" data-option="0">New</a>
+        <a href="#" data-option="1">Yes</a>
+        <a href="#" data-option="2">Maybe</a>
+        <a href="#" data-option="3">No</a>
+        <a href="#" data-option="4">Emailed</a>
+        <a href="#" data-option="7">[Deleted]</a>
+      </div>
+      <div class="filter">
+        <strong>User</strong>
+        <a href="#" class="logout">logout</a>
+      </div>
+    </nav>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Point of Contact</th>
+        <th>Email</th>
+        <th>URL</th>
+        <th>Logo</th>
+        <th>Status</th>
+        <th>&nbsp;</th>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div id="update">
+  <div class="stuff"></div>
+  <br>
+  <a href="#" class="close">close</a>
+</div>
+
+<script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>

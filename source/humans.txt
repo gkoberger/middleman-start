@@ -1,11 +1,8 @@
 # humanstxt.org/
 # The humans responsible & technology colophon
 
-# TEAM
+# SITE BY
 
-    Gregory Koberger -- @twitter 
+    Gregory Koberger
+    http://gkoberger.net
 
-# TECHNOLOGY COLOPHON
-
-    HTML5, CSS3
-    jQuery, Modernizr

@@ -1,0 +1,38 @@
+---
+page: update 
+---
+
+<div id="info">
+  <h2>Reveal your secret identity</h2>
+  <p>Your team has applied to Hackfest, but we'll need a bit more information about you before we can look at your application.</p>
+  <p>Fill out the form below&hellip; and get ready to hack!</p>
+</div>
+<div id="join-container">
+  <div id="join">
+    <form method="POST" action="/" class="apply-form hide-on-done" data-type="ResumeObject">
+      <div class="form-input cols3 first">
+        <label for="form_m_university">University <sup>*</sup></label>
+        <input type="text" id="form_m_university" name="college" placeholder="Your current University" class="required"> 
+      </div>
+
+      <div class="form-input cols1">
+        <label for="form_m_year">Year <sup>*</sup></label>
+        <input type="text" id="form_m_year" name="year" placeholder="20XX" class="validyear required"> 
+      </div>
+
+      <div class="form-input cols4 first">
+        <div class="resume">
+          <strong>Upload your resume<sup>*</sup>:</strong> <input type="dropbox-chooser" name="selected_file" style="visibility: hidden;"/>
+        </div>
+      </div>
+
+      <input type="hidden" id="form_m_id" name="id">
+      <input type="hidden" id="form_m_email" name="email">
+
+      <div class="form-input cols4 center">
+        <button type="Submit">Go!</button>
+      </div>
+    </form>
+    <%= partial "footer" %>
+  </div>
+</div>

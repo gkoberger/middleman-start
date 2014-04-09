@@ -1,12 +1,8 @@
-// Uncomment if you want HTML5 Boilerplate
-//= 'require vendor/normalize'
-//= 'require vendor/main'
-
-// Bootstrap
-//= require vendor/bootstrap.min
-//= require vendor/bootstrap-theme.min
-//= require vendor/font-awesome.min
-
-//= 'require vendor/code.css'
-
-//= require style
+//= require "normalize.css"
+//= require "vendor/font-awesome.min.css"
+//= require "vendor/unsemantic-grid-responsive-tablet.css"
+//= require "main.css"
+//= require "style.css"
+//= require "animations.css"
+//= require "reveal.css"
+//= require "hackfest.css"

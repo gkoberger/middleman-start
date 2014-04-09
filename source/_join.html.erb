@@ -1,0 +1,186 @@
+<div id="mobile-apply">
+  <strong>Want to join in on the fun?</strong>
+  <%= link_to 'Apply', '/apply/', :class => 'apply' %>
+</div>
+<div id="join-container">
+    <div id="join">
+        <div class="spinner">
+            <div class="rays"></div>
+        </div>
+        <h2>Join the League</h2>
+
+        <div id="signup">
+            <div class="side" id="form-hackfest">
+                <p class="info">07.27.2013</p>
+                <h3>Greylock Hackfest</h3>
+                <p class="hide-on-done">
+                  It's a bird&hellip; It's a plane&hellip; It's greylock hackfest! Hopefully evil has other plans that weekend—because you and your team will be too busy building something <strong>awesome</strong>.
+                </p>
+
+                <div class="apply-done">
+                    <div class="boom">
+                        <div class="boom2"></div>
+                        <div class="boom3"></div>
+                        <div class="boom4"></div>
+                    </div>
+
+                    <strong>Thanks for applying!</strong>
+                    <p>We'll let you know by <strong>June 1<sup>st</sup></strong> if you've been selected to participate in Hackfest2!</p>
+                </div>
+
+                <p class="closed">
+                  We've now closed registration for the Hackfest, and we'll be notifying selected teams by July 13th. Questions? Please contact <a href="mailto:julie@greylock.com">Julie Deroche (julie@greylock.com)</a>.</a>
+                </p>
+                <!--
+                <div class="apply-opener hide-on-done">
+                    <a href="#" class="apply b-l">team</a><a href="#" class="apply b-r">individual</a>
+                </div>
+                -->
+
+                <form method="POST" action="/" class="apply-form hide-on-done" data-type="HackfestObject">
+                    <div class="form-input cols2 first">
+                        <label for="form_h_name">Name <sup>*</sup></label>
+                        <input type="text" id="form_h_name" name="full_name" placeholder="First and Last" class="required">
+                    </div>
+
+                    <div class="form-input cols2">
+                        <label for="form_h_email">Email <sup>*</sup></label>
+                        <input type="text" id="form_h_email" name="email" placeholder="you@website.com" class="email required">
+                    </div>
+
+                    <div class="form-input cols3 first">
+                        <label for="form_h_university">University <sup>*</sup></label>
+                        <input type="text" id="form_h_university" name="college" placeholder="Your current University" class="required"> 
+                    </div>
+
+                    <div class="form-input cols1">
+                        <label for="form_h_year">Year <sup>*</sup></label>
+                        <input type="text" id="form_h_year" name="year" placeholder="20XX" class="validyear required"> 
+                    </div>
+
+                    <div class="form-input cols4">
+                        <label for="form_h_why">We'll only take the best. Impress us.</label>
+                        <p>We want to know why you're a contender &mdash; why you just may be the best. What's your specialty? What's the geography of your passion? Got an area of supreme expertise? Awesome. What is it? If programming languages were superpowers, what would that make you? Make sure to throw down a link or three: blog, GitHub, HackerLeague, LinkedIn &mdash; anything impressive.</p>
+                        <textarea id="form_h_why" name="why" placeholder="Dazzle us!" rows="10"></textarea>
+                    </div>
+
+                    <div class="form-input has-team cols4 first">
+                        <div class="form-input cols2 first">
+                            <input type="text" id="form_h_team1" name="team1" placeholder="Teammate #1 Name">
+                        </div>
+                        <div class="form-input cols2">
+                            <input type="text" id="form_h_email1" name="team1email" class="email" placeholder="Email">
+                        </div>
+
+                        <div class="form-input cols2 first">
+                            <input type="text" id="form_h_team2" name="team2" placeholder="Teammate #2 Name">
+                        </div>
+                        <div class="form-input cols2">
+                            <input type="text" id="form_h_email2" name="team2email" class="email" placeholder="Email">
+                        </div>
+
+                        <div class="form-input cols2 first">
+                            <input type="text" id="form_h_team3" name="team3" placeholder="Teammate #3 Name">
+                        </div>
+                        <div class="form-input cols2">
+                            <input type="text" id="form_h_email3" name="team3email" class="email" placeholder="Email">
+                        </div>
+                    </div>
+
+                    <div class="form-input cols4 first">
+                        <div class="resume">
+                            <strong>Upload your resume:</strong> <input type="dropbox-chooser" name="selected_file" style="visibility: hidden;"/>
+                        </div>
+                    </div>
+
+                    <div class="form-input cols4 center">
+                        <button type="Submit">Go!</button>
+                    </div>
+                </form>
+                <!-- 
+                <div class="more hide-on-done">
+                    or, <a href="/hackfest.html">learn more</a>
+                </div>
+                -->
+            </div>
+            <div class="side" id="form-company">
+                <p class="info">Now accepting resumes for 2014</p>
+                <h3>Greylock&#39;s Portfolio</h3>
+                <p class="hide-on-done">
+                  Our <strong>50+ awesome portfolio companies</strong> are looking for CS interns and new grads. Showcase your heroic self, and we <em>will</em> find you the perfect match. 
+                </p>
+
+                <div class="apply-done">
+                    <div class="boom">
+                        <div class="boom2"></div>
+                        <div class="boom3"></div>
+                        <div class="boom4"></div>
+                    </div>
+
+                    <strong>Thanks for applying!</strong>
+                    <p>We'll let you know <strong>within a week</strong> if we think we've found the perfect company for you!</p>
+                </div>
+                <form method="POST" action="/" class="apply-form hide-on-done" data-type="ResumeObject">
+                    <div class="form-input cols2 first">
+                        <label for="form_c_name">Name <sup>*</sup></label>
+                        <input type="text" id="form_c_name" name="full_name" placeholder="First and Last" class="required">
+                    </div>
+
+                    <div class="form-input cols2">
+                        <label for="form_c_email">Email <sup>*</sup></label>
+                        <input type="text" id="form_c_email" name="email" placeholder="you@website.com" class="email required">
+                    </div>
+
+                    <div class="form-input cols3 first">
+                        <label for="form_c_university">University <sup>*</sup></label>
+                        <input type="text" id="form_c_university" name="college" placeholder="Your current University" class="required"> 
+                    </div>
+
+                    <div class="form-input cols1">
+                        <label for="form_c_year">Year <sup>*</sup></label>
+                        <input type="text" id="form_c_year" name="year" placeholder="20XX" class="validyear required"> 
+                    </div>
+
+                    <div class="form-input cols4">
+                      <label for="form_c_why">What does your resume not say about you?</label>
+                      <p>We'd like to know what makes you tick, what makes you a pro, what makes you stand out—what makes you <em>you</em>. In a year or three, what will you be doing? Which companies in our portfolio impress you? Which do you wish you'd started? What's your ideal role? What's your dream team?</p>
+                        <textarea id="form_c_why" name="why" placeholder="Dazzle us!" rows="10"></textarea>
+                    </div>
+
+                    <div class="form-input cols4 checks">
+                        <h3>Looking for&hellip; <sup>*</sup></h3>
+                        <label for="looking" class="error" style="display: none"></label>
+
+                        <div class="form-input cols2">
+                            <input type="checkbox" id="check_i" name="looking" value="i"> 
+                            <label for="check_i">Internship <span>Summer 2014</span></label>
+                        </div>
+                        <div class="form-input cols2">
+                            <input type="checkbox" id="check_ft" name="looking" value="ft"> 
+                            <label for="check_ft">Full Time <span>Summer 2014</span></label>
+                        </div>
+                    </div>
+
+                    <div class="form-input cols4 first">
+                        <div class="resume">
+                            <strong>Upload your resume<sup>*</sup>:</strong> <input type="dropbox-chooser" name="selected_file" style="visibility: hidden;"/>
+                        </div>
+                    </div>
+
+                    <div class="form-input cols4 center">
+                        <button type="Submit">Go!</button>
+                    </div>
+                </form>
+                <div class="apply-opener apply-hide">
+                    <a href="#" class="apply hide-on-done">submit resume</a>
+                </div>
+                <!-- 
+                <div class="more hide-on-done">
+                    or, <a href="/index.html">learn more</a>
+                </div>
+                -->
+            </div>
+        </div>
+        <%= partial "footer" %>
+    </div>
+</div>

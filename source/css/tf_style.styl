@@ -1,0 +1,744 @@
+@import 'nib'
+
+tf_blue = #00a5db
+
+museo = "museo", sans-serif
+
+*
+  box-sizing border-box
+
+header
+  .container
+    min-width 600px 
+
+#header, section, footer
+  .container
+    padding 0 100px
+
+#header
+  padding-top 170px
+  background-color tf_blue 
+  background-image url('/img/techfair/city.png')
+  background-repeat repeat-x
+  background-position bottom center
+  padding-bottom 170px
+  h1, h2
+    margin 0
+  h2
+    margin-bottom 13px
+    @media (max-width: 769px)
+      text-align center
+  h1
+    font-family museo
+    font-weight 700
+    color #fff
+    font-size 80px
+    font-weight 700
+    text-shadow 1px 1px 1px rgba(0,0,0,0.3)
+    line-height 1.05em
+    strong
+      position relative
+      display inline-block
+      span
+        position relative
+        z-index 2
+      &:after
+        content ' '
+        width 199px
+        height 30px
+        display block
+        background-image url('/img/techfair/marker.png')
+        z-index 1
+        position absolute
+        left 50%
+        bottom -26px
+        margin-left -100px
+    @media (max-width: 769px)
+      text-align center
+  h3 
+    font-family "museo-sans-rounded", sans-serif
+    font-weight 100
+    color #fff
+    font-size 20px
+    text-align center
+    margin 70px auto 0
+    @media (max-width: 769px)
+      margin-top 40px
+    @media (max-width: 480px)
+      text-align center
+      font-size 14px
+    i 
+      margin-right 10px
+      margin-left 15px
+      &:first-child
+        margin-left 0px
+    strong
+      font-weight 700
+  h4 
+    font-family "museo-sans-rounded", sans-serif
+    font-weight 100
+    color rgba(255, 255, 255, 0.5)
+    text-align center
+    font-size 17px
+    text-align center
+    max-width 410px
+    margin auto
+  #apply-as
+    margin-top 87px
+    color rgba(255, 255, 255, 0.5)
+    @media (max-width: 1025px)
+      margin-top 50px
+    @media (max-width: 769px)
+      margin-top 70px
+    p 
+      font-size 0.8em
+      margin-top 0
+      @media (max-width: 769px)
+        text-align center
+    a
+      box-sizing border-box
+      padding 16px 66px 16px 20px
+      text-decoration none
+      display block
+      text-align center
+      border-radius 4px 8px 8px 4px
+      position relative
+      margin-bottom 10px
+      &.open
+        visibility hidden
+        pointer-events none
+      &:after
+        padding 16px 20px
+        content "\00a0"
+        display block
+        position absolute
+        right 0
+        top 0
+        box-sizing border-box
+        border-radius 0 5px 5px 0
+        background-image url('/img/techfair/plus.png')
+        background-repeat no-repeat
+        background-position center center
+    a.company
+      background-color #fff
+      color darken(@background-color, 60%)
+      &:hover
+        background-color darken(@background-color, 10%)
+      &:after
+        background-color darken(@background-color, 20%)
+    a.student
+      background-color #fcc041
+      color darken(@background-color, 60%)
+      &:after
+        background-color darken(@background-color, 20%)
+      &:hover
+        background-color darken(@background-color, 10%)
+
+
+
+.gl
+  font-family "museo-sans-rounded", sans-serif
+  font-weight 100
+  color rgba(255,255,255,0.5)
+  font-size 34px
+  strong
+    font-weight 700
+
+#form_student
+  .topbar
+    background-color #fcc041
+    color darken(@background-color, 60%)
+    background-color darken(@background-color, 10%)
+    a.close
+      background-color darken(@background-color, 20%)
+
+#form_company
+  .topbar
+    background-color #fff
+    color darken(@background-color, 60%)
+    background-color darken(@background-color, 10%)
+    a.close
+      background-color darken(@background-color, 20%)
+
+.apply_form
+  display none
+  position absolute
+  box-sizing border-box
+  z-index 100
+  border-radius 4px
+  overflow hidden
+  input.error
+    border 1px solid lighten(red, 20%) !important
+  label.error
+    color lighten(red, 20%) !important
+    margin-top 5px
+  &.on
+    transition 0.5s ease-out
+  &.rotate
+    .topbar
+      border-radius 4px 6px 0 0
+      .close span
+        transform rotate(315deg)
+        border-radius 0 4px 0 0
+
+  .topbar
+    width 100%
+    box-sizing border-box
+    padding 16px 66px 16px 20px
+    text-decoration none
+    display block
+    text-align center
+    border-radius 4px
+    margin-right 20px
+    transition border-radius 0.5s ease-out
+    a.close
+      text-decoration none
+      padding 16px 20px
+      display block
+      position absolute
+      right 0
+      top 0
+      box-sizing border-box
+      border-radius 0 4px 4px 0
+      background-repeat no-repeat
+      background-position center center
+      transition border-radius 0.5s ease-out
+      span
+        width 13px
+        height 13px
+        display block
+        position absolute
+        background-image url('/img/techfair/plus.png')
+        absolute 50% 50%
+        left 50%
+        margin-left -6px
+        top 50%
+        margin-top -6px
+        transition all 0.5s ease-out
+  .form
+    background-color #fff
+    border-radius 0 0 4px 4px
+    .thanks
+      padding 30px
+      text-align center
+      strong
+        color #444
+        display block
+        margin-bottom 10px
+      p
+        color #888
+    form
+    .req
+      color darken(red, 20%)
+    p
+      margin 0
+      font-size 12px
+      color #888
+      strong
+        color #000
+        font-weight normal
+    .details p
+      color #999
+      font-size 11px
+      margin 20px 0 0
+    .section
+      margin 0 20px
+    .container_fluid
+      padding 20px 0
+    .form-bottom
+      background-color #eee
+      padding 20px
+      text-align right
+    label
+      font-size 12px
+      color #888
+      margin-bottom 4px
+      display block
+    input[type=email], input[type=text], textarea
+      border 1px solid #ccc
+      box-shadow 0 2px 2px #eee inset
+    button
+      background-color #fcc041
+      color darken(@background-color, 60%) !important
+      padding 10px 50px 10px 20px 
+      border-radius 4px
+      border 0 none
+      position relative
+      text-shadow 0 0
+      box-shadow 0 0
+      &:after
+        padding 10px 15px
+        content "\00a0"
+        display block
+        position absolute
+        right 0
+        top 0
+        box-sizing border-box
+        border-radius 0 5px 5px 0
+        background-color darken(#fcc041, 10%)
+        background-image url('/img/techfair/arrow.png?')
+        background-repeat no-repeat
+        background-position center center
+      &:hover
+        background-color darken(#fcc041, 10%)
+      &:disabled
+        background-color #ccc
+        &:after
+          background-color darken(#ccc, 10%)
+  .grid-50, .grid-40, .grid-60, .grid-100, .grid-75, .grid-25
+    margin-bottom 20px
+  .grid-100
+    margin-top 20px
+  .container-grid
+    margin 0 10px
+
+.deviceMobile
+  .apply_form
+    position relative
+    margin-bottom 20px
+    .topbar
+      display none
+
+#overlay
+  opacity 0
+  background-color rgba(0, 0, 0, 0.7)
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100%
+  z-index 99
+  transition 0.5s ease-out
+  pointer-events none
+  &.on
+    pointer-events auto
+    cursor pointer
+    opacity 1
+
+section#intro
+  background linear-gradient(#eee 0%, #fff 20%)
+  h3
+    margin 0
+    font-family museo
+    color #0a7498
+    font-weight 400
+    font-size 33px
+  p
+    color #888
+    line-height 1.9em
+    font-size 14px
+    &.other
+      font-style italic
+      a
+        color tf_blue
+        text-decoration none
+        &:hover
+          text-decoration underline
+  .hello
+    max-width 90%
+  p.details
+    color #666
+    margin-top 5px
+    i
+      padding-right 3px
+      font-size 14px
+      padding-left 15px
+      &.icon-calendar
+        padding-left 0
+    .loc-short
+      display none
+    @media (max-width: 870px)
+      .loc-long
+        display none
+      .loc-short
+        display inline
+    @media (max-width: 768px)
+      text-align center
+      .loc
+        display block
+        i
+          padding-left 0
+
+section
+  padding 70px 0
+  h2
+    margin-top 0
+    font-family museo
+    font-weight 500
+    text-align center
+    font-size 25px
+    color #4e5253
+    &:after
+      width 40px
+      height 5px
+      background-color #ccc
+      content ' '
+      display block
+      margin 15px auto
+
+section#companies
+  background linear-gradient(#eee 0%, #fff 20%)
+  .companies_list
+    font-size 1px
+  .more
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 30px;
+  .participate
+    margin-top 35px
+    p 
+      text-align center
+      margin 0
+      color #444
+      font-size 14px
+      a
+        color tf_blue
+        text-decoration none
+        &:hover
+          color darken(tf_blue, 20%)
+
+section#map
+  position relative
+  padding 0
+  #map-overlay
+    width 300px
+    margin-left (@width / 2) * -1
+    background-color rgba(255, 255, 255, 0.9)
+    padding 20px 30px
+    position absolute
+    left 50%
+    top 145px
+    z-index 5
+    text-align center
+    border-radius 5px
+    box-shadow 0 0 5px rgba(0,0,0,0.3)
+    h2
+      margin-top 0
+    address
+      font-size 12px
+    a
+      box-sizing border-box
+      padding 16px 66px 16px 20px
+      text-decoration none
+      display block
+      text-align center
+      border-radius 4px 8px 8px 4px
+      position relative
+      margin 20px auto
+      /* background-color #fcc041 */
+      background-color #fcb622
+      color rgba(0, 0, 0, 60%)
+      line-height 25px
+      i
+        font-size 23px
+        line-height 25px
+        background-color darken(@background-color, 20%)
+        padding 16px 20px
+        display block
+        position absolute
+        right 0
+        top 0
+        box-sizing border-box
+        border-radius 0 5px 5px 0
+        color rgba(0, 0, 0, 0.4)
+      &:hover
+        background-color darken(@background-color, 10%)
+    p
+      margin 20px 0 0
+      font-size 12px
+      color #999
+  #map-canvas
+    height 500px
+
+  &.static
+    #map-overlay
+      top 115px
+    #map-canvas
+      background-image: url(/img/techfair/map-static.png);
+      background-position: top center;
+      height 400px
+
+section#agenda
+  .speaker
+    box-shadow 0 0 7px #888
+    border-radius 5px
+    padding-bottom 15px
+    margin-bottom 20px
+    .headshot
+      background-image url('/img/techfair/headshot-4.jpg')
+      background-size cover
+      background-repeat no-repeat
+      height 140px
+      border-radius 5px 5px 0 0
+      background-position center center
+      &.hs1
+        background-image url('/img/techfair/headshot-1.jpg')
+      &.hs2
+        background-image url('/img/techfair/headshot-2.jpg')
+      &.hs3
+        background-image url('/img/techfair/headshot-3.jpg')
+      &.hs4
+        background-image url('/img/techfair/headshot-4.jpg')
+      &.hs5
+        background-image url('/img/techfair/headshot-5.jpg')
+    .top
+      margin 15px
+      time
+        font-size 12px
+        text-align center
+        color #888
+        display block
+        margin 0
+      h3
+        text-align center
+        font-family museo
+        font-weight 500
+        font-size 21px
+        color #0a7498
+        margin 0
+      h4
+        text-align: center;
+        font-size: 11px;
+        font-weight: normal;
+        margin 0
+    p
+      color #666
+      padding 15px 15px 0 15px
+      text-align center
+      font-size 13px
+      margin 0
+      strong
+        display block
+  .links
+    text-align center
+    margin-top 15px
+    a
+      text-decoration none
+      display inline-block
+      margin 0 2px
+      font-size 20px
+      color #888
+      &:hover
+        color tf_blue
+        transform scale(1.3)
+
+footer
+  padding 70px 0
+  background-color tf_blue
+  color #fff
+  h2
+    font-size: 25px;
+    font-family: "museo-sans-rounded", sans-serif;
+    font-weight: 300;
+    text-transform: lowercase;
+    margin-top: 0;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+    strong
+      position relative
+      display inline-block
+      span
+        position relative
+        z-index 2
+      &:after
+        content ' '
+        display block
+        background-image url('/img/techfair/marker.png')
+        z-index 1
+        position absolute
+        left 50%
+        width 100px
+        height 15px
+        background-repeat no-repeat
+        background-size contain
+        margin-left -50px
+        bottom -11px
+  p
+    font-size 12px
+    line-height 1.6em
+    color rgba(255,255,255,0.7)
+    a
+      color rgba(255,255,255,0.5)
+      text-decoration none
+      &:hover
+        color rgba(255,255,255,1)
+  #greylock-logos
+    background-image url('/img/footer-logos.png')
+    height 200px
+    background-repeat no-repeat
+    background-position top right
+
+@media (max-width: 820px)
+  a.gp
+    width 16px
+    position relative
+    margin-right 20px
+    &:after
+      width 16px
+      background-image url('/img/gp.png')
+      content ' '
+      height 29px
+      display block
+      position absolute
+      left 19px
+      top 0
+      background-position -111px 0
+
+@media (max-width: 480px)
+  #header
+    padding-top 80px
+    padding-bottom 100px
+    background-size auto 100px
+    #apply-as
+      margin-top 40px
+      a
+        margin-right 0
+    h1, h2
+      text-align center
+    h1
+      font-size 40px
+      strong:after
+        width 100px
+        height 15px
+        background-repeat no-repeat
+        background-size contain
+        margin-left -50px
+        bottom -11px
+    h2
+      font-size 20px
+
+#companies
+  text-align center
+  [class^=logo-]
+    width 150px
+    height (58px * 0.75)
+    display inline-block
+    background-image url(/img/techfair/logos.png?5)
+    opacity 0.7
+    margin 0 15px
+    vertical-align middle
+    margin-bottom 15px
+    margin-top 13px
+    background-size auto (550px * 0.75)
+    @media (max-width: 820px)
+      height 29px
+      background-size auto 275px 
+      margin 0 10px
+      margin-bottom 11px
+      margin-top 6px
+    logoer(left top width)
+      background-position (left * 0.75) (top * 0.75)
+      width width * 0.75
+      @media (max-width: 820px)
+        width (width / 2px)
+        background-position (left / 2) (top / 2)
+    &:hover
+      opacity 1
+    &.logo-backplane 
+      logoer -21px -146px 288px
+    &.logo-betable 
+      logoer -341px -146px 239px
+    &.logo-cloudera 
+      logoer -614px -146px 238px
+
+    &.logo-paloaltonetworks
+      logoer -893px -146px 250px
+    &.logo-chartboost
+      logoer -1188px -141px 381px
+    &.logo-tellapart
+      logoer -1594px -146px 225px
+
+    &.logo-dropbox 
+      logoer -15px -244px 198px
+    &.logo-edmodo 
+      logoer -232px -244px 180px
+    &.logo-facebook 
+      logoer -448px -244px 270px
+    &.logo-firebase 
+      logoer -751px -242px 286px
+    &.logo-lyft 
+      logoer -1072px -243px 98px
+      height @height + 11px
+      margin-bottom @margin-bottom - 11px
+      @media (max-width: 820px)
+        height 36px
+        margin-bottom 0
+    &.logo-redfin 
+      logoer -1211px -242px 216px
+    &.logo-pandora 
+      logoer -1460px -242px 338px
+
+    &.logo-messageme 
+      logoer -10px -341px 367px
+    &.logo-nextdoor 
+      logoer -394px -341px 393px
+    &.logo-thumbtack 
+      logoer -824px -341px 355px
+    &.logo-airbnb 
+      logoer -1209px -341px 141px
+    &.logo-clearslide 
+      logoer -1383px -341px 173px
+      height @height + 6px
+      margin-bottom @margin-bottom - 6px
+      @media (max-width: 820px)
+        height 37px
+        margin-bottom 3px
+    &.logo-linkedin 
+      logoer -1562px -341px 220px
+    &.logo-okta 
+      logoer -1811px -341px 207px
+
+    &.logo-pocketgems 
+      logoer -13px -441px 238px
+    &.logo-purestorage 
+      logoer -281px -441px 348px
+    &.logo-creativelive 
+      logoer -679px -441px 375px
+    &.logo-chegg 
+      logoer -1083px -441px 183px
+    &.logo-cardspring 
+      logoer -1294px -441px 267px
+    &.logo-path 
+      logoer -1580px -441px 152px
+
+    &.logo-appdynamics
+      background-position: -101px -3px;
+      width: 92px;
+      height: 74px;
+      @media (max-width: 820px)
+        width 60px
+        height 49px
+        background-position -67px -1px
+    &.logo-electricimp
+      background-position -563px -3px
+      width 123px
+      height 74px
+      @media (max-width: 820px)
+        width 81px
+        height 49px
+        background-position -376px -3px
+    &.logo-pinterest
+      background-position -483px -3px
+      width 66px
+      height 73px
+      @media (max-width: 820px)
+        width 44px
+        height 49px
+        background-position -322px -3px
+    &.logo-flipboard
+      background-position: -211px -3px;
+      width: 57px;
+      height: 73px;
+      @media (max-width: 820px)
+        width 37px
+        height 49px
+        background-position -140px -1px
+    &.logo-onekingslane
+      background-position: -283px -3px;
+      width: 172px;
+      height: 75px;
+      @media (max-width: 820px)
+        width 112px
+        height 49px
+        background-position -189px -1px
+

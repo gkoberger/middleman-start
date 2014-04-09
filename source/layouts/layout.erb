@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!-- Use title if it's in the page YAML frontmatter -->
+        <title><%= data.page.title || "greylockU :: superheros needed" %></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <% if ['hackfest'].include? current_page.data.page %>
+          <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Noto+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+        <% end %>
+
+        <% if ['techfair'].include? current_page.data.page %>
+          <script type="text/javascript" src="//use.typekit.net/qtu7vaw.js"></script>
+          <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+          <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+          <link rel="stylesheet" href="/css/techfair.css">
+        <% else %>
+          <link rel="stylesheet" href="/css/all.css">
+        <% end %>
+
+
+        <link rel="image_src" href="http://greylocku.com/img/preview.png" id="preview">
+        <meta property="og:image" content="http://greylocku.com/img/preview.png?1">
+        <meta property="og:site_name" content="GreylockU :: Superheros Needed">
+        <meta property="og:title" content="<%= data.page.title || "greylockU :: superheros needed" %>">
+        <meta property="og:description" content="Greylock's 50+ awesome portfolio companies are looking for CS interns and new grads. Show us your superpowers!">
+
+        <script src="/js/setup-top.js"></script>
+    </head>
+    <body id="<%= current_page.data.page %>">
+        <header>
+          <div class="container">
+            <%= link_to 'greylocku', '/', :class => 'logo' %>
+            <nav>
+              <%= link_to 'home', '/', :class => ('active' if current_page.data.page == 'home') %>
+              <%= link_to 'hackfest', '/hackfest', :class => ('active' if current_page.data.page == 'hackfest') %>
+              <!-- <%= link_to 'apply', '/apply', :id => 'apply-link', :class => ('active' if current_page.data.page == 'apply') %> -->
+              <%= link_to 'techfair', '/techfair', :id => 'techfair-link', :class => ('active' if current_page.data.page == 'techfair') %>
+            </nav>
+            <a href="http://www.greylock.com" target="_blank" class="gp">greylock partners</a>
+          </div>
+        </header>
+
+        <%= yield %>
+
+        <% if ['home', 'apply'].include? current_page.data.page %>
+          <%= partial "join" %>
+        <% end %>
+
+        <script src="/js/techfair.js"></script>
+        <script type="text/javascript" src="/js/vendor/dropbox.js" id="dropboxjs" data-app-key="uerv5rcip5auaoo"></script>
+
+        <%= partial "analytics" %>
+    </body>
+</html>
