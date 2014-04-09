@@ -7,10 +7,25 @@ $(function() {
     
     $header.addClass('not_fixed');
 
+    var prizes = {};
+    var $p = $('#prizes');
+    var $w = $(window);
+
     $(window).resize(function() {
         if(categorizr.isMobile) return;
         var h = $window.height();
         $hf_header.height(h - 40);
+
+        prizes = {
+          top : $p.offset().top,
+          height : $p.outerHeight(),
+          height_half : $p.outerHeight() / 2,
+          $el : $p,
+          window_height : $w.height(),
+        };
+        prizes.start = prizes.top - prizes.window_height;
+        prizes.end = prizes.top + prizes.height;
+
     }).trigger('resize');
 
 
@@ -33,4 +48,16 @@ $(function() {
       if(count < 2) return;
       $('#hackfest-main .hackfest-header').addClass('on');
     };
+
+
+    if(categorizr.isDesktop) {
+      $(window).scroll(function() {
+        var st = $w.scrollTop();
+        if(st > prizes.start && st < prizes.end) {
+          var pct = (st - prizes.start) / (prizes.end - prizes.start);
+          prizes.$el.css('background-position', '0 ' + ((prizes.height * -1 * pct) + (prizes.height_half)) + 'px')
+        }
+      }).trigger('scroll');
+      
+    }
 });
