@@ -8,8 +8,9 @@ $(function() {
     $header.addClass('not_fixed');
 
     $(window).resize(function() {
+        if(categorizr.isMobile) return;
         var h = $window.height();
-        $hf_header.height(h - $header.outerHeight() - 40);
+        $hf_header.height(h - 40);
     }).trigger('resize');
 
 
