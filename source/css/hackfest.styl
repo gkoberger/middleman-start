@@ -100,7 +100,7 @@ body#hackfest
         border-left 1px solid #fff
         border-bottom 1px solid #fff
 
-  .desc, #judges, #sponsors, #prizes, #tips, #details
+  .desc, #judges, #sponsors, #prizes, #tips, #details, #sponsors
     margin-bottom 150px
     @media mobile_break
       margin-bottom 50px
@@ -228,12 +228,13 @@ body#hackfest
       &.lite
         li
           color rgba(0,0,0,0.8)
+          background-color rgba(255,255,255,0.6)
       li
         margin 0 0 5px
         font-size 13px
-        background-color rgba(255,255,255,0.6)
         padding 0
         list-style none
+        background-color rgba(255,255,255,0.9)
         padding 10px 8px
         text-align center
 
@@ -292,3 +293,23 @@ body#hackfest
       &:hover
         color #fff
 
+.sponsors-container
+  text-align center
+  .logo
+    &.medium
+      width 128px
+      height 128px
+      background-image url(../img/hackfest/2014/logos/medium.png)
+      display block
+      &:hover
+        background-position 0 -128px
+    &.facebook
+      width 282px
+      height 56px
+      background-image url(../img/hackfest/2014/logos/facebook.png)
+      display block
+      &:hover
+        background-position 0 -56px
+    vertical-align middle !important
+    display inline-block !important
+    margin 20px
