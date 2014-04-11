@@ -29,9 +29,10 @@ body#hackfest
     background-color #000
     .hackfest-header
       position relative
-      background-image: url(../img/hackfest/2014/bg-top.jpg);
+      background-image url(../img/hackfest/2014/bg-top.jpg)
+      background-image url(../img/hackfest/2014/bg-top-2.jpg)
       background-size: cover;
-      background-position: center center;
+      background-position: 50% 0%;
       min-height 500px
       @media mobile_break
         height 300px
@@ -39,7 +40,7 @@ body#hackfest
         background-image: url(../img/hackfest/2014/bg-top-mobile.jpg);
 
       opacity 0
-      transition 0.3s ease-out
+      transition opacity 0.3s ease-out
 
       &.on
         opacity 1

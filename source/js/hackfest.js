@@ -57,6 +57,16 @@ $(function() {
           var pct = (st - prizes.start) / (prizes.end - prizes.start);
           prizes.$el.css('background-position', '0 ' + ((prizes.height * -1 * pct) + (prizes.height_half)) + 'px')
         }
+
+
+        /*
+        // w: 1306
+        // h: 1666
+        $('.hackfest-header').height() / $(window).height()
+        */
+
+        $('.hackfest-header').css('background-position', 'center ' + ((st / $('.hackfest-header').height()) * 100) + '%');
+        //background-position: center -50px;
       }).trigger('scroll');
       
     }
