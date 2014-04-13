@@ -30,7 +30,6 @@ body#hackfest
     .hackfest-header
       position relative
       background-image url(../img/hackfest/2014/bg-top.jpg)
-      background-image url(../img/hackfest/2014/bg-top-2.jpg)
       background-size: cover;
       background-position: 50% 0%;
       min-height 500px
@@ -101,7 +100,7 @@ body#hackfest
         border-left 1px solid #fff
         border-bottom 1px solid #fff
 
-  .desc, #judges, #sponsors, #prizes, #tips, #details, #sponsors
+  .desc, #judges, #sponsors, #prizes, #tips, #details, #sponsors, #lastyear
     margin-bottom 150px
     @media mobile_break
       margin-bottom 50px
@@ -255,16 +254,185 @@ body#hackfest
       &:hover
         color blue
 
-  #details
+  #lastyear
+    background-color #444
+    padding 100px 20px
+    background-image url(../img/hackfest/2014/bg-lastyear.jpg)
+    @media mobile_break
+      background-image url(../img/hackfest/2014/bg-prizes-mobile.jpg)
+      background-attachment initial
+    background-size cover
+    background-position center center
+    background-attachment fixed
+    color #fff
+    h4
+      color #fff
     h5
+      font-size 30px
       text-align center
+      margin 10px 0
+    .halo
+      width 75px
+      height 75px
+      padding 5px
+      border 1px solid #bbb
+      margin 20px auto
+      border-radius 100px
+    .image
+      width 75px
+      height 75px
+      border-radius 100px
+      margin auto
+      &.team2012
+        background-image url(../img/hackfest/2014/team-2012.jpg)
+      &.team2013
+        background-image url(../img/hackfest/2014/team-2013.jpg)
+      &.team2014
+        background-image url(../img/hackfest/2014/team-2014.jpg)
+    p
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.6em;
+      padding: 0 10px;
+      margin: 0 0 10px 0;
+    .team
+      font-family noto
+      list-style none
+      padding 0
+      margin 0
+      text-align: center;
+      font-size: 12px;
+      opacity: 0.5;
+      line-height: 1.7em;
+    .apply-link-parent
+      text-align center
+      .apply-link
+        display inline-block
+        background-color rgba(255,255,255,0.5)
+        border-radius 5px
+        padding 10px 30px
+        font-weight bold
+        text-decoration none
+        color #000
+        margin-top 10px
+        &:hover
+          background-color rgba(255,255,255,0.9)
+    .hosted
+      text-align center
+      color rgba(255,255,255,0.5)
+      span
+        display inline-block
+        height 25px
+        background-size contain
+        text-indent -9999px
+        opacity 0.7
+        vertical-align middle
+      &.host2012 span
+        background-image url(../img/hackfest/2014/host-2012.png)
+        width 90px
+      &.host2013 span
+        background-image url(../img/hackfest/2014/host-2013.png)
+        width 55px
+      &.host2014 span
+        background-image url(../img/hackfest/2014/host-2014.png)
+        width 25px
+
+  #details
+    h4
+      margin-bottom 20px
+    h5
       color #999
       font-weight 300
-      font-size 20px
+      margin 0
+      text-align left
+      font-size 15px
+      text-transform uppercase
     ul
       font-family nato
+      list-style none
+      padding 0
+      font-size 13px
+      margin-bottom 20px
       li
         margin-bottom 6px
+    label
+      color #555
+      font-size 12px
+      padding 0 10px 3px
+      display block
+      margin-top 20px
+      &.error
+        margin-top 5px
+        color rgb(197, 136, 136)
+    input, textarea
+      border 0 none
+      border-bottom 1px solid #ccc
+      border-top 1px solid #eee
+      border-radius 0 0
+      background-color #f9f9f9
+      box-shadow 0 0
+      &.error
+        border-bottom-color rgb(197, 136, 136)
+        color rgb(197, 136, 136)
+    .apply-done
+      display none
+      &.on
+        display block
+      &.saved
+        text-align center
+        color rgb(117, 182, 117)
+        h4
+          color rgb(117, 182, 117)
+        .icon-check-sign
+          font-size 50px
+    .apply-individual, .apply-team
+      width 50%
+      display inline-block
+      border 1px solid #ccc
+      padding 10px 20px
+      text-align center
+      border-radius 15px 0 0 15px
+      float left
+      box-sizing border-box
+      margin-top 20px
+      text-decoration none
+      cursor pointer
+    #teammates
+      display none
+      input
+        margin-top 20px
+
+    .apply-team
+      border-radius 0 15px 15px 0
+      border-left 0 none
+    .dropbox-chooser
+      margin-left 10px
+      margin-top 5px
+    .type-picker
+      display none
+      &:checked + label
+        color #333
+        background-color #eee
+        font-weight bold
+        font-size 12px
+
+    .action
+      margin-top 20px
+      text-align right
+      button
+        border 1px solid #ccc
+        background linear-gradient(#fff, #eee)
+        box-shadow 0 0
+        text-shadow 0 0
+        color #555 !important
+        padding 12px 44px
+        &:hover, &:focus
+          border 1px solid blue
+          outline 0 none
+          color blue !important
+        &:active
+          background linear-gradient(#eee, #fff)
+          outline 0 none
 
   #footer
     background-color blue

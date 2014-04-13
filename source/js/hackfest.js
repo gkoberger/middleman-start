@@ -70,4 +70,14 @@ $(function() {
       }).trigger('scroll');
       
     }
+
+    $('#as_individual, #as_team').change(function(e) {
+      e.preventDefault();
+
+      if($('#as_individual').is(':checked')) {
+        $('#teammates').hide();
+      } else {
+        $('#teammates').slideDown();
+      }
+    });
 });
