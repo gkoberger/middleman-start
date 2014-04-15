@@ -237,6 +237,19 @@ body#hackfest
         background-color rgba(255,255,255,0.9)
         padding 10px 8px
         text-align center
+    // New stuff
+    .icon-trophy
+      margin-top 0
+    .bignumber
+      color #fff
+      text-align center
+      font-weight bold
+      font-size 100px
+    .grandprize
+      text-align center
+      color rgba(255,255,255,0.5)
+      font-size 30px
+      margin-top 10px
 
   #tips
     p
@@ -464,6 +477,13 @@ body#hackfest
 
 .sponsors-container
   text-align center
+  @media mobile_break
+    display none
+  #sponsors-other
+    margin-top 15px
+  .grid-container
+    max-width 778px
+    text-align left
   .logo
     &.medium
       width 128px
