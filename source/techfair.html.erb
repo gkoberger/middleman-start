@@ -201,9 +201,30 @@ title: "Tech Fair :: greylockU"
       <a href="http://electricimp.com" target="_blank" class="logo-electricimp"></a>
     </div>
     -->
+    <!--
     <div class="grid-100 participate">
       <p>Does your company want to participate? <a href="#" id="apply_company">Apply now!</a></p>
     </div>
+    -->
+  </div>
+  <div class="suggest">
+  <div class="grid-container" id="suggest" class="apply_form" data-button=".company">
+    <div class="prefix-25 grid-50 form">
+      <form method="POST" data-type="SuggestObject">
+        <strong>Which companies do you want to see this year?</strong>
+        <p>Select last year's companies from the autocomplete, or suggest new ones we haven't had yet!</p>
+        <div>
+          <input id="suggestcompanies" name="companies" style='width:300px' placeholder="Suggest companies (start typing)">
+        </div>
+        <div>
+          <input name="email" class="form-control" style='width:300px' placeholder="Email Address">
+        </div>
+        <div>
+          <button type="submit">Apply</button>
+        </div>
+      </form>
+    </div>
+  </div>
   </div>
 </section>
 

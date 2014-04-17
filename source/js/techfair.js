@@ -2,6 +2,7 @@
 //= require "vendor/jquery.validate.js"
 //= require "vendor/jquery.lightbox_me.js"
 //= require "vendor/imagesloaded.pkgd.min.js"
+//= require "vendor/select2.js"
 
 //= require "setup.js"
 //= require "main.js"
@@ -101,6 +102,11 @@ $(function() {
                         'html': '<strong>Thanks for signing up!</strong><p>We can\'t wait to see you there!</p>',
                         'class': 'thanks'
                     }));
+                } else if($form.data('type') == 'SuggestObject') {
+                    $form.replaceWith($("<div>", {
+                        'html': '<strong>Thanks for your suggestions!</strong><p>We\'ll reach out to your companies. Check back in a few weeks to see the list of companies!</p>',
+                        'class': 'thanks'
+                    }));
                 } else {
                     $form.replaceWith($("<div>", {
                         'html': '<strong>Application submitted!</strong><p>Thanks for applying! We\'ll let you know soon if your application has been accepted.</p>',
@@ -152,13 +158,24 @@ $(function() {
         submitHandler: handle_submit,
     });
 
+    $("#suggest form").validate({
+        ignore: '',
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+        },
+        submitHandler: handle_submit,
+    });
+
     if(!categorizr.isDesktop) {
         $('#map').addClass('static');
     } else {
         var map;
         function initialize() {
 
-            var center = new google.maps.LatLng(37.775259,-122.393165);
+            var center = new google.maps.LatLng(37.785259,-122.393165);
             var mapOptions = {
                 zoom: 14,
                 center: center,
@@ -177,7 +194,7 @@ $(function() {
             mapOptions);
 
             var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(37.785759,-122.393165),
+                position: new google.maps.LatLng(37.7955,-122.3937),
                 map: map,
                 title: 'Terra Gallery'
             });
@@ -216,4 +233,49 @@ $(function() {
             $window.trigger('resize');
         }, 1000);
     }
+
+    var companies = [
+      'AirBnb',
+      'Backplane',
+      'Betable',
+      'CardSpring',
+      'Chartboost',
+      'Chegg',
+      'Clearslide',
+      'Cloudera',
+      'CreativeLive',
+      'Dropbox',
+      'Edmodo',
+      'Facebook',
+      'Firebase',
+      'LinkedIn',
+      'Lyft',
+      'MessageMe',
+      'Nextdoor',
+      'Okta',
+      'Palo Alto Networks',
+      'Path',
+      'Pandora',
+      'Pocket Gems',
+      'Pure Storage',
+      'Redfin',
+      'TellApart',
+      'Thumbtack',
+      'Pinterest',
+      'AppDynamics',
+      'One Kings Lane',
+      'Flipboard',
+      'Electric Imp',
+
+    ];
+    var companies_json = [];
+    $.each(companies, function(k, v) {
+      companies_json.push({'text': v, id: v});
+    });
+
+    $("#suggestcompanies").select2({
+      createSearchChoice:function(term, data) { if ($(data).filter(function() { return this.text.localeCompare(term)===0; }).length===0) {return {id:term, text:term};} },
+      multiple: true,
+      data: companies_json,
+    })
 });

@@ -387,6 +387,49 @@ section
       margin 15px auto
 
 section#companies
+  .select2-container
+    text-align left
+  .suggest
+    .form
+      padding: 20px 40px;
+      border: 1px solid #eee;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      box-shadow: 0 1px 0 #fff inset;
+      button
+        border 1px solid #ccc
+        background linear-gradient(#fff, #eee)
+        box-shadow 0 0
+        text-shadow 0 0
+        color #555 !important
+        padding 12px 44px
+        margin-top 10px
+        &:hover, &:focus
+          border 1px solid #0673ad
+          outline 0 none
+          color #0673ad !important
+        &:active
+          background linear-gradient(#eee, #fff)
+          outline 0 none
+      label.error
+        color red
+        display block
+      strong
+        font-family "museo", sans-serif
+        color #e43d39
+      p
+        margin-top: 5px;
+        font-size: 14px;
+        color: #999;
+        margin-bottom: 20px;
+
+    .form-control
+      width 300px
+      margin-top 10px
+      border 1px solid #AAA
+      padding 6px
+      font-size 13px
+      box-shadow 0 25px 15px -25px rgba(0,0,0,0.1) inset
   background linear-gradient(#eee 0%, #fff 20%)
   .companies_list
     font-size 1px
