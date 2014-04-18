@@ -17,21 +17,17 @@ header
 
 #header
   padding-top 170px
-  background-color tf_blue 
-  background-image url('/img/techfair/city.png')
+  min-height 660px
+  background-color #343434
+  background-image url('/img/techfair/bg-ferry.png')
   background-repeat repeat-x
   background-position bottom center
   padding-bottom 170px
   position relative
-  .ferry
-    width 299px
-    height 171px
-    background-repeat no-repeat
-    image '/img/ferry.png' 299px 171px
-    position absolute
-    bottom -7px
-    left 50%
-    margin-left -150px
+  @media (max-width: 769px)
+    background-image url('/img/techfair/bg-ferry-solo.png')
+    background-size: 260px;
+    background-repeat: no-repeat;
   h1, h2
     margin 0
   h2
@@ -46,6 +42,9 @@ header
     font-weight 700
     text-shadow 1px 1px 1px rgba(0,0,0,0.3)
     line-height 1.05em
+    @media (max-width: 1120px)
+      font-size 60px
+
     strong
       position relative
       display inline-block
@@ -95,9 +94,11 @@ header
     margin auto
   #apply-as
     margin-top 87px
-    color rgba(255, 255, 255, 0.5)
+    color #888
+    padding-left 40px
     @media (max-width: 1025px)
       margin-top 50px
+      padding 0 50px
     @media (max-width: 769px)
       margin-top 70px
     p 
@@ -136,9 +137,11 @@ header
         background-color darken(@background-color, 10%)
       &:after
         background-color darken(@background-color, 20%)
+        background-color #eee
     a.student
-      background-color #fcc041
+      background-color #e43d39
       color darken(@background-color, 60%)
+      color #fff
       &:after
         background-color darken(@background-color, 20%)
       &:hover
@@ -156,8 +159,9 @@ header
 
 #form_student
   .topbar
-    background-color #fcc041
+    background-color #e43d39
     color darken(@background-color, 60%)
+    color #fff
     background-color darken(@background-color, 10%)
     a.close
       background-color darken(@background-color, 20%)
@@ -169,6 +173,7 @@ header
     background-color darken(@background-color, 10%)
     a.close
       background-color darken(@background-color, 20%)
+      background-color #eee
 
 .apply_form
   display none
@@ -268,7 +273,7 @@ header
       border 1px solid #ccc
       box-shadow 0 2px 2px #eee inset
     button
-      background-color #fcc041
+      background-color #e43d39
       color darken(@background-color, 60%) !important
       padding 10px 50px 10px 20px 
       border-radius 4px
@@ -276,6 +281,7 @@ header
       position relative
       text-shadow 0 0
       box-shadow 0 0
+      color #fff
       &:after
         padding 10px 15px
         content "\00a0"
@@ -285,12 +291,12 @@ header
         top 0
         box-sizing border-box
         border-radius 0 5px 5px 0
-        background-color darken(#fcc041, 10%)
+        background-color darken(#e43d39, 10%)
         background-image url('/img/techfair/arrow.png?')
         background-repeat no-repeat
         background-position center center
       &:hover
-        background-color darken(#fcc041, 10%)
+        background-color darken(#e43d39, 10%)
       &:disabled
         background-color #ccc
         &:after
@@ -330,7 +336,7 @@ section#intro
   h3
     margin 0
     font-family museo
-    color #0a7498
+    color #e43d39
     font-weight 400
     font-size 33px
   p
@@ -346,6 +352,7 @@ section#intro
           text-decoration underline
   .hello
     max-width 90%
+    max-height 300px
   p.details
     color #666
     margin-top 5px
@@ -480,8 +487,8 @@ section#map
       position relative
       margin 20px auto
       /* background-color #fcc041 */
-      background-color #fcb622
-      color rgba(0, 0, 0, 60%)
+      background-color #e43d39
+      color #fff
       line-height 25px
       i
         font-size 23px
@@ -494,7 +501,7 @@ section#map
         top 0
         box-sizing border-box
         border-radius 0 5px 5px 0
-        color rgba(0, 0, 0, 0.4)
+        color #fff
       &:hover
         background-color darken(@background-color, 10%)
     p
@@ -578,7 +585,7 @@ section#agenda
 
 footer
   padding 70px 0
-  background-color tf_blue
+  background-color #333
   color #fff
   h2
     font-size: 25px;
@@ -642,6 +649,8 @@ footer
     padding-top 80px
     padding-bottom 180px
     background-size auto 100px
+    min-height: 430px;
+    height: 590px;
     #apply-as
       margin-top 40px
       a
