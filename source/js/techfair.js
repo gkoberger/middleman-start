@@ -105,7 +105,7 @@ $(function() {
                 } else if($form.data('type') == 'SuggestObject') {
                     $form.replaceWith($("<div>", {
                         'html': '<strong>Thanks for your suggestions!</strong><p>We\'ll reach out to your companies. Check back in a few weeks to see the list of companies!</p>',
-                        'class': 'thanks'
+                        'class': 'thanks pad'
                     }));
                 } else {
                     $form.replaceWith($("<div>", {
@@ -161,6 +161,9 @@ $(function() {
     $("#suggest form").validate({
         ignore: '',
         rules: {
+            name: {
+                required: true,
+            },
             email: {
                 required: true,
                 email: true
@@ -273,9 +276,16 @@ $(function() {
       companies_json.push({'text': v, id: v});
     });
 
-    $("#suggestcompanies").select2({
-      createSearchChoice:function(term, data) { if ($(data).filter(function() { return this.text.localeCompare(term)===0; }).length===0) {return {id:term, text:term};} },
-      multiple: true,
-      data: companies_json,
-    })
+    $('#suggest-modal').click(function(e) {
+      e.preventDefault();
+      setTimeout(function() {
+        $("#suggestcompanies").select2({
+          createSearchChoice:function(term, data) { if ($(data).filter(function() { return this.text.localeCompare(term)===0; }).length===0) {return {id:term, text:term};} },
+          multiple: true,
+          data: companies_json,
+        })
+      }, 10);
+
+      $('#suggest').lightbox_me();
+    });
 });

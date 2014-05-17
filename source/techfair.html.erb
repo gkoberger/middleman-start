@@ -7,12 +7,12 @@ title: "Tech Fair :: greylockU"
   <div class="grid-container">
     <div class="grid-50 tablet-grid-50">
       <h2 class="gl">greylock<strong>techfair</strong></h2>
-      <h1>Jump-start your <strong><span>career!</span></strong></h1>
+      <h1>Techfair is coming <strong><span>back!</span></strong></h1>
     </div>
     <div class="grid-50 tablet-grid-50" id="apply-as">
       <div class="grid-container grid-parent">
         <div class="grid-95 prefix-5 grid-parent">
-          <p>Space is limited, so make sure you apply quickly.</p>
+          <p>300 students ; 50 companies</p>
         </div>
       </div>
       <div class="grid-container grid-parent">
@@ -33,7 +33,7 @@ title: "Tech Fair :: greylockU"
   <div class="grid-container">
     <div class="grid-100">
       <!--
-      <h3><i class="icon-calendar"></i>07.31.2014 6pm <i class="icon-map-marker"></i>Ferry Building</h3>
+      <h3><i class="icon-calendar"></i>07.31.2014 6:30pm <i class="icon-map-marker"></i>Ferry Building</h3>
       -->
     </div>
   </div>
@@ -141,16 +141,20 @@ title: "Tech Fair :: greylockU"
 
 <section id="intro">
   <div class="grid-container">
+    <!--
     <div class="prefix-10 grid-20 tablet-prefix-10 tablet-grid-20 hide-on-mobile" id="hello">
       <img src="/img/techfair/hello.png" alt="Hello!" class="hello">
     </div>
-    <div class="grid-60 tablet-grid-60">
-      <h3>Get ready to shake some hands.</h3>
+    -->
+    <div class="prefix-20 grid-60 tablet-grid-60">
+      <h3>Get Ready to Grow Your Network</h3>
+      <!--
       <p>Greylock Tech Fair connects students and companies for an informal and unparalleled networking event. Meet with engineers, and learn about some of the best of the Bay Area's technology companies. Alongside the fair, we'll be hosting a series of intimate and informative talks. Industry leaders including Bret Taylor, former CTO of Facebook, will cover a variety of topics so you can better prepare yourself for the choices ahead of you.</p>
       <p class="other">Not in the Bay Area, but still interested in talking with our companies? You can <a href="/">sign up here</a>!</p>
+      -->
       <p class="details">
         <i class="icon-calendar"></i> 07.31.2014
-        <i class="icon-time"></i> 6PM
+        <i class="icon-time"></i> 6:30PM
         <span class="loc">
           <i class="icon-map-marker"></i> The Ferry Building, <span class="loc-short">SF</span><span class="loc-long">San Francisco</span>
         </span>
@@ -163,7 +167,7 @@ title: "Tech Fair :: greylockU"
   <div class="grid-container">
     <div class="grid-100">
       <h2>The Companies</h2>
-      <p class="more">We'll be announcing more companies as the event gets closer!</p>
+      <p class="more">This year's companies to be revealed by 05/19.</p>
     </div>
     <!--
     <div class="grid-100 grid-parent companies_list">
@@ -210,23 +214,34 @@ title: "Tech Fair :: greylockU"
     -->
   </div>
   <div class="suggest">
-  <div class="grid-container" id="suggest" class="apply_form" data-button=".company">
-    <div class="prefix-25 grid-50 form">
-      <form method="POST" data-type="SuggestObject">
-        <strong>Which companies do you want to see this year?</strong>
-        <p>Select last year's companies from the autocomplete, or suggest new ones we haven't had yet!</p>
-        <div>
-          <input id="suggestcompanies" name="companies" style='width:300px' placeholder="Suggest companies (start typing)">
-        </div>
-        <div>
-          <input name="email" class="form-control" style='width:300px' placeholder="Email Address">
-        </div>
-        <div>
-          <button type="submit">Apply</button>
-        </div>
-      </form>
+    <a href="#" id="suggest-modal">
+      Suggest a Company
+      <i class="icon-plus-sign"></i>
+    </a>
+    <div id="suggest" class="apply_form" data-button=".company">
+        <form method="POST" data-type="SuggestObject">
+          <strong>Which companies do you want to see this year?</strong>
+          <div class="pad">
+            <p>Select last year's companies from the autocomplete, or suggest new ones we haven't had yet!</p>
+            <div>
+              <input id="suggestcompanies" name="companies" style='width:301px' placeholder="Suggest companies (start typing)">
+            </div>
+            <div>
+              <textarea name="other" placeholder="Other Suggestions" style="width:300px" class="form-control"></textarea>
+            </div>
+            <div>
+              <input name="name" class="form-control" style='width:300px' placeholder="Name">
+            </div>
+            <div>
+              <input name="email" class="form-control" style='width:300px' placeholder="Email Address">
+            </div>
+            <div>
+              <button type="submit">Suggest</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
   </div>
 </section>
 
@@ -241,19 +256,21 @@ title: "Tech Fair :: greylockU"
   </div>
 </section>
 
-<footer>
+<footer id="greylock-logo">
   <div class="grid-container">
-    <div class="grid-30 tablet-grid-50">
+    <div class="grid-50 tablet-grid-50">
       <h2>About <strong><span>Greylock</span></strong></h2>
-      <p>As founders, operators and investors, we strive to be the best partners for entrepreneurs building disruptive consumer and enterprise software companies. We create partnerships with tech entrepreneurs at the earliest stages of creation and support them as their companies grow and evolve.</p>
+      <p>Greylock partners with game-changing entrepreneurs to build market-transforming companies. Our partner companies have made 150 public offerings and more than 100 of our companies have achieved profitable M&amp;A events.</p>
+      <p>As founders, operators and investors, we strive to be the best partners for entrepreneurs building disruptive consumer and enterprise software
+        companies. We create partnerships with tech entrepreneurs at the earliest stages of creation and support them as their companies grow and evolve.</p>
+      <p>We continue to invest in companies that define new markets, including <a href="http://airbnb.com">Airbnb</a>, <a href="http://apptio.com">Apptio</a>, <a href="http://cloudera.com">Cloudera</a>, <a href="http://coupons.com">Coupons.com</a>, <a href="http://dropbox.com">Dropbox</a>, <a href="http://facebook.com">Facebook</a> (Nasdaq: FB), <a href="http://onekingslane.com">One Kings Lane</a>, <a href="http://linkedin.com">LinkedIn</a> (Nasdaq: FB), <a href="http://paloaltonetworks.com">Palo Alto Networks</a> (NYSE: PANW), <a href="http://redfin.com">Redfin</a>, <a href="http://tumblr.com">tumblr</a>, and <a href="http://workday.com">Workday</a> (NYSE: WDAY).
+      
+      <p>
       <p>
         <strong><a href="http://greylock.com">Visit Greylock</a></strong> &nbsp; 
         <a href="http://twitter.com/greylockvc"><i class="icon-twitter"></i> Twitter</a> &nbsp;
         <a href="http://greylockvc.com"><i class="icon-comment"></i> Blog</a>
       </p>
-    </div>
-    <div class="grid-70 hide-on-mobile hide-on-tablet">
-      <div id="greylock-logos"></div>
     </div>
   </div>
 </footer>
@@ -265,7 +282,7 @@ title: "Tech Fair :: greylockU"
     <form data-type="StudentObject">
       <div class="grid-container">
         <div class="grid-100 tablet-grid-100">
-          <p>At this point, we can only accept CS students graduating in 2014 and beyond.</p>
+          <p>At this point, we can only accept CS students graduating in 2015 and beyond.</p>
         </div>
 
         <div class="grid-50 tablet-grid-50">
