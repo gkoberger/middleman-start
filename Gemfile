@@ -2,16 +2,15 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem "middleman", "~>3.2.2"
+gem "middleman", "~>3.0.13"
+
+gem "middleman-livereload"
 
 gem "therubyracer" #Less dependency
 gem "less"
 
 gem "stylus"
+ 
+gem "middleman-smusher"
 
-gem 'middleman-s3_sync'
-
-gem "middleman-favicon-maker", "~>3.2"
-
-gem "middleman-syntax"
-gem "redcarpet"
+# gem 'middleman-s3_sync'
