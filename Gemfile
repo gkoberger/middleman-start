@@ -13,4 +13,4 @@ gem "stylus"
  
 gem "middleman-smusher"
 
-# gem 'middleman-s3_sync'
+gem 'middleman-s3_sync'
