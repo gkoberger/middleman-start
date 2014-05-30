@@ -1979,10 +1979,52 @@ html.deviceTablet {
 }
 
 #update {
-    background-color: #eee;
+    background-image: url(/img/hackfest/2014/bg-top.jpg);
+    background-position: center center;
+    background-size: cover;
     form {
         margin: 40px auto !important;
         overflow: hidden;
+    }
+    #info {
+        background-color: rgba(0,0,0,0.7);
+        padding: 50px;
+        margin-top: 160px;
+        color: #fff;
+        h2 {
+            color: #fff;
+        }
+        p {
+            color: #eee;
+        }
+        label {
+            text-align: left;
+            margin-top: 20px;
+            display: block;
+        }
+        div.dropbox-chooser {
+            margin-top: 10px;
+        }
+        button {
+            border: 0 none;
+            margin-top: 30px;
+            width: 100%;
+            box-shadow: 0 0;
+            padding: 12px 40px;
+            background-color: #fff;
+            color: #000 !important;
+            text-shadow: 0 0 !important;
+            &:hover {
+                background-color: #eee;
+            }
+        }
+        input {
+            background-color: rgba(255,255,255,0.9);
+            border: 0 none;
+            box-shadow: 0 0;
+            border-radius: 0;
+            margin-top: 7px;
+        }
     }
 }
 #info {
