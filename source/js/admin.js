@@ -1,4 +1,6 @@
 $(function() {
+    /* Holy crap this is the worst code every... */
+
     var user = Parse.User.current();
 
     var labels = {
@@ -177,6 +179,14 @@ $(function() {
         $table.removeClass('type-all type-indv type-team type-ft type-i').addClass('type-' + $(this).data('option'));
     });
 
+    $('.filter-year a').click(function(e) {
+        $(this).parent().find('.active').removeClass('active');
+        $(this).addClass('active');
+
+        var $table = $(this).closest('.div').find('table');
+        $table.removeClass('year-all year-2014 year-2013').addClass('year-' + $(this).data('option'));
+    });
+
     $('.go').click(function(e) {
         e.preventDefault();
         go($(this).attr('href').replace(/#/, ''));
@@ -235,6 +245,9 @@ $(function() {
                    $tr.append($('<td>').append($sc));
                    var status = v.get('status') ? v.get('status') : 0;
                    $tr.addClass('is-' + status);
+
+                   $tr.addClass('year-' + v.createdAt.getUTCFullYear());
+
                    $sc.val(status);
 
                    $els['edit'] = $('<td>');
@@ -278,11 +291,13 @@ $(function() {
                    $tr.append($looking);
 
                    var looking = v.get('looking');
-                   $.each(looking, function(k, v) {
-                       var name = v == 'ft' ? 'Full-Time' : 'Internship';
-                       $looking.append($('<div>', {'text': name}));
-                       $tr.addClass('type-' + v);
-                   });
+                   if(looking) {
+                     $.each(looking, function(k, v) {
+                         var name = v == 'ft' ? 'Full-Time' : 'Internship';
+                         $looking.append($('<div>', {'text': name}));
+                         $tr.addClass('type-' + v);
+                     });
+                   }
 
                    var why = v.get('why'); 
                    var $dazzle = $('<td>', {'class': 'dazzle'});
@@ -299,6 +314,9 @@ $(function() {
                    $tr.append($('<td>').append($sc));
                    var status = v.get('status') ? v.get('status') : 0;
                    $tr.addClass('is-' + status);
+
+                   $tr.addClass('year-' + v.createdAt.getUTCFullYear());
+
                    $sc.val(status);
 
                    $edit = $('<td>');
@@ -335,12 +353,14 @@ $(function() {
                    $tr.append($('<td>', {'text': v.get('university') + ' ' + v.get('year')}));
                    $tr.append($('<td>', {'text': v.get('email')}));
 
+                   $tr.append($('<td>', {'text': prettyDate(v.createdAt), 'title': v.createdAt}));
                    $tr.append($('<td>').append(resumeBuilder('resume', v)));
 
                    var $sc = $select.clone();
                    $tr.append($('<td>').append($sc));
                    var status = v.get('status') ? v.get('status') : 0;
                    $tr.addClass('is-' + status);
+                   $tr.addClass('year-' + v.createdAt.getUTCFullYear());
                    $sc.val(status);
 
                    $edit = $('<td>');
@@ -376,6 +396,8 @@ $(function() {
                    $tr.append($('<td>', {'text': v.get('contact_name')}));
                    $tr.append($('<td>', {'text': v.get('email')}));
 
+                   $tr.append($('<td>', {'text': prettyDate(v.createdAt)}));
+
                    $logo = $('<a>', {'text': v.get('company_url'), 'href': v.get('company_url'), 'target': '_blank'});
                    $tr.append($('<td>').append($logo));
 
@@ -386,6 +408,7 @@ $(function() {
                    $tr.append($('<td>').append($sc));
                    var status = v.get('status') ? v.get('status') : 0;
                    $tr.addClass('is-' + status);
+                   $tr.addClass('year-' + v.createdAt.getUTCFullYear());
                    $sc.val(status);
 
                    $edit = $('<td>');

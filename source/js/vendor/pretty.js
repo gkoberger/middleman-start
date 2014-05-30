@@ -6,7 +6,18 @@
 
 // Takes an ISO time and returns a string representing how
 // long ago the date represents.
+
+Date.prototype.monthName = function() {
+    return this.toUTCString().split(' ')[2]
+};
+
 function prettyDate(time){
+  var month = time.monthName();
+  var day = time.getUTCDate();
+  var year = time.getUTCFullYear();
+
+  return month + " " + day + ", " + year;
+
 	var date = time,
 		diff = (((new Date()).getTime() - date.getTime()) / 1000),
 		day_diff = Math.floor(diff / 86400);
