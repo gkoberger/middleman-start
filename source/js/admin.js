@@ -220,14 +220,16 @@ $(function() {
                    var $tr = $('<tr>', {'data-id': v.id, 'class': 'row type-' + type});
 
                    var $els = {};
-                   $els['name'] = $('<td>', {'text': v.get('full_name')})
+                   var $email = $('<a>', {'href': 'mailto:' + v.get('email'), 'text': v.get('full_name')})
+                   $els['name'] = $('<td>')
+                   $els['name'].append($email);
                    $tr.append($els['name']);
 
                    $els['college'] = $('<td>', {'text': v.get('college') + ' ' + v.get('year')})
                    $tr.append($els['college']);
 
-                   $els['email'] = $('<td>', {'text': v.get('email')});
-                   $tr.append($els['email']);
+                   $els['intern'] = $('<td>', {'text': v.get('intern')});
+                   $tr.append($els['intern']);
 
                    $els['resume'] = $('<td>');
                    $tr.append($els['resume']);
@@ -427,7 +429,7 @@ $(function() {
 
     function addTeam(id, v, $els) {
         if(v.get('team' + id)) {
-            $els['name'].append($('<div>', {'class': 'teammate', 'text': v.get('team' + id)}));
+            $els['name'].append($('<a>', {'href': 'mailto:' + v.get('team' + id + 'email'), 'class': 'teammate', 'text': v.get('team' + id)}));
 
             var college = v.get('team' + id + 'college');
             college = college ? college : '-';
@@ -436,7 +438,7 @@ $(function() {
             
             $els['resume'].append(resumeBuilder('team' + id + 'resume', v));
 
-            $els['email'].append($('<div>', {'class': 'teammate', 'text': v.get('team' + id + 'email')}));
+            $els['intern'].append($('<div>', {'class': 'teammate', 'text': v.get('team' + id + 'intern')}));
         }
     }
 
