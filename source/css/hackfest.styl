@@ -270,6 +270,54 @@ body#hackfest
         margin-bottom 5px
       p
         color rgba(#fff, 0.8)
+    .prize-person
+      width 75px
+      height 75px
+      background-color red
+      border-radius 100px
+      display inline-block
+      text-decoration none
+      margin 0 11px
+      box-shadow 0 0 0 5px rgba(#fff,0.3) inset
+      transition 0.3s ease-out
+      background-size cover
+      &.ev
+        background-image url(/img/prize-people-ev.png)
+      &.david
+        background-image url(/img/prize-people-david.png)
+      &.josh
+        background-image url(/img/prize-people-josh.png)
+      .icon-twitter
+        color #fff
+        width 75px
+        height 75px
+        display block
+        text-align center
+        padding-top 18px
+        font-size 40px
+        box-sizing border-box
+        opacity 0
+        transform scale(0.3)
+        pointer-events none
+        transition 0.3s ease-out
+      .name
+        transition 0.3s ease-out
+        opacity 0
+      &:hover
+        text-decoration none
+        box-shadow 0 0 0 35px rgba(#000,0.5) inset
+        .icon-twitter
+          opacity 1
+          transform scale(1)
+        .name
+          opacity 1
+      .name
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        width: 125px;
+        margin-left: -25px;
+        padding-top: 10px;
 
   #tips
     p
@@ -392,9 +440,12 @@ body#hackfest
     .applyonce
       font-family nato
       color #999
-      margin-top 20px
-      padding-top 20px
-      border-top 1px solid #ddd
+      text-align center
+      color #222
+      max-width 600px
+      margin 20px auto
+      strong
+        color darken(red, 20%)
     label
       color #555
       font-size 12px
